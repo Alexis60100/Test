@@ -1,0 +1,237 @@
+:root{
+    --alphaValue1: 0;
+    --alphaValue2: 0;
+    --lockonAlpha: 0;
+}
+
+*{
+    font-family: "Iceland";
+}
+
+body{
+    background-color: rgb(50, 50, 50);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background */
+
+
+/*.background {
+    background-image: url(https://3615ptv.files.wordpress.com/2015/11/wipeout-hd-1920x1080-wallpaper-917330.jpg);
+    z-index: -10;
+    text-align: center;
+    
+}*/
+
+#background2{
+
+    width: 100%;
+    height: 45em; /* 40em*/
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, var(--alphaValue1)), rgba(0, 0, 0, var(--alphaValue2))),
+    /*url('https://3615ptv.files.wordpress.com/2015/11/wipeout-hd-1920x1080-wallpaper-917330.jpg');*/
+    url('https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb');
+      
+}
+
+
+
+/* Basic */ 
+
+.logos{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap : 1em;
+    filter:invert(1);
+}
+
+.presentation{
+    text-align: center;
+    margin-top: -1em;
+    font-size: 32px;
+}
+
+.identity{
+    display: flex;
+    filter: grayscale(100%);
+}
+
+.photo img{
+    position: absolute;
+    object-fit: cover;
+    margin-left: 13.5em;
+    margin-top: 3em;
+    border-radius: 100%;
+}
+
+
+
+/* Lock-On */
+
+#lockon{
+    margin-top: 0em;
+    margin-left: 10em;
+    filter: opacity(--lockonAlpha) invert(100%);
+    visibility: hidden;
+}
+
+.lockon1{
+    position: absolute;
+    animation: lockon1 5s infinite linear;
+    
+}
+
+@keyframes lockon1{
+    from{-webkit-transform: rotate(0deg);}
+    to{-webkit-transform: rotate(359deg);}
+}
+
+.lockon2{
+    position: absolute;
+    animation: lockon2 6s infinite linear;
+}
+
+@keyframes lockon2{
+    from{-webkit-transform: rotate(359deg);}
+    to{-webkit-transform: rotate(0deg);}
+}
+
+.lockon3{
+    position: absolute;
+    animation: lockon3 7s infinite linear;
+}
+
+@keyframes lockon3{
+    from{-webkit-transform: rotate(0deg);}
+    to{-webkit-transform: rotate(359deg);}
+}
+
+
+.bar{
+    position: absolute;
+    margin-left: 25em;
+    margin-top: 16em;
+    filter: invert(100%);
+
+}
+
+.bar img{
+    width: 0em; /* Taille du Crop, centré*/
+    object-fit: none;
+    object-position: left;
+}
+
+
+/* Container */
+
+.container{
+
+    position: absolute;
+    visibility: hidden;
+    margin-top: 5em;
+    margin-left: 34em;
+
+    border: 0.25em solid white;
+    border-radius: 0.1em;
+    width: 0em;
+    height: 10em;
+
+}
+
+.containerText{
+    margin-left: 0.5em;
+    font-size: 24px;
+    line-height: 0em;
+}
+
+.arrowContainer{
+    margin-left: 29em;
+}
+
+.arrow{
+    position: absolute;
+    /*left: 0;*/
+    margin-top: 5em;
+    margin-left: 7em;
+
+    filter: invert(100%);
+
+    animation: arrow 0.5s infinite linear;
+    transition : all;
+}
+
+@keyframes arrow{
+    0% {margin-left: 1em;}
+    50% {margin-left: 0em;}
+    100% {margin-left: 1em;}
+}
+
+
+/* Menu */
+
+.menuBackground{
+    background-color: rgb(25, 25, 25);
+    /*background-color: rgb(45, 50, 50);*/
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu button {
+    
+    background-color: white;
+    height:4em;
+}
+
+.menu h1{
+    margin-top: 0.33em;
+}
+
+select{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+/* Content */
+
+#content{
+    background-color: rgb(50, 50, 50);
+    /*background-color: rgb(55, 90, 100);*/
+}
+
+
+.title1{
+    margin-left: 4em;
+}
+
+.unity{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.trle{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rivals{
+    
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.music{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+    
